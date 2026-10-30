@@ -1,0 +1,35 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/articles', label: 'Articles' },
+  { href: '/powertrack', label: 'PowerTrack' },
+  { href: '/coaching', label: 'Coaching' },
+  { href: '/about', label: 'About' },
+]
+const path = Astro.url.pathname
+---
+
+<header class="border-b border-border bg-bg/80 backdrop-blur sticky top-0 z-10">
+  <nav class="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <a href="/" class="font-sans font-bold text-ink no-underline text-lg tracking-tight">
+      Remoratechnical
+    </a>
+    <ul class="flex items-center gap-5 text-sm font-sans">
+      {links.slice(1).map((l) => (
+        <li>
+          <a
+            href={l.href}
+            class:list={[
+              'no-underline transition-colors',
+              path === l.href || path.startsWith(l.href + '/')
+                ? 'text-ink font-medium'
+                : 'text-ink-muted hover:text-ink',
+            ]}
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

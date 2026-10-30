@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="PowerTrack" description="The strength training app I built — free to use.">
+  <article class="prose">
+    <h1>PowerTrack</h1>
+    <p class="lead">
+      PowerTrack is the training app I use with every lifter I coach. It's web-based,
+      free, and designed for powerlifters who care about numbers.
+    </p>
+
+    <p>
+      <a
+        href="https://your-powertrack-url.example"
+        class="inline-block mt-2 bg-accent hover:bg-accent-dark text-bg no-underline font-sans font-medium px-5 py-2.5 rounded"
+      >
+        Open PowerTrack →
+      </a>
+    </p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Workout logging</strong> — sets, reps, weight, RPE, notes</li>
+      <li><strong>Automatic PRs</strong> — detected on every workout at every rep count</li>
+      <li><strong>e1RM progression</strong> charts per lift, Epley-based, bodyweight-aware</li>
+      <li><strong>DOTS tracking</strong> over time for powerlifters</li>
+      <li><strong>Volume + intensity analytics</strong> with sensible defaults</li>
+      <li><strong>Meet prep</strong> — opener suggestions, attempt tracking</li>
+      <li><strong>XLSX import / export</strong> so you own your data</li>
+      <li><strong>AI coach</strong> that reads your training and gives feedback</li>
+    </ul>
+
+    <h2>Why I built it</h2>
+    <p>
+      Nothing on the market got the small things right at the same time: proper
+      e1RM that accounts for bodyweight exercises, DOTS as a first-class metric,
+      a workout logger that doesn't feel like a chore, and analytics that actually
+      inform the next session. So I built one.
+    </p>
+
+    <h2>Pricing</h2>
+    <p>
+      Free for now. If you're a lifter I coach, your account is set up as part of
+      onboarding.
+    </p>
+  </article>
+</BaseLayout>

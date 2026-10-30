@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: theme('fontFamily.serif');
+    color: theme('colors.ink');
+    background: theme('colors.bg');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: theme('fontFamily.sans');
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: theme('colors.accent');
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    color: theme('colors.accent-dark');
+  }
+}
